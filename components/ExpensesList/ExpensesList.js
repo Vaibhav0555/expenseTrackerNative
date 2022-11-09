@@ -2,14 +2,13 @@ import { FlatList,View,Text, Pressable } from "react-native";
 import styles from "./ExpensesList.styles";
 import {getFullDate} from '../../utils/date';
 import { useNavigation } from "@react-navigation/native";
-import { useSelector } from "react-redux";
 
-const ExpesnseList =()=>{
-    const expensesList=useSelector((state)=>state.expense.ExpenseListCenter)
+const ExpesnseList =({expensesList})=>{
     const navigation=useNavigation();
     const onPressHandler=(id)=>{
         navigation.navigate('Manage expense',{expenseId:id})
     }
+
     return(
         <FlatList
         data={expensesList}
