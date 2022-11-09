@@ -33,7 +33,20 @@ const ExpenseSlice= createSlice({
     initialState:initialstate,
     name:"centeralizedExpenselist",
     reducers:{
-
+      delete(state,action){
+        const selectedIndex =state.ExpenseListCenter.findIndex((element)=>element.id === action.payload)
+        state.ExpenseListCenter.splice(selectedIndex,1)
+      },
+      add(state,action){
+        state.ExpenseListCenter.push(action.payload)
+      },
+      update(state,action){
+        const {id,updatedExpense} = action.payload;
+        const selectedIndex =state.ExpenseListCenter.findIndex((element)=>element.id === id)
+        console.log(id);
+        state.ExpenseListCenter[selectedIndex]={id,...updatedExpense};
+        console.log(state.ExpenseListCenter);     
+      }
     }
 })
 
