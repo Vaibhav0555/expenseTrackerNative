@@ -1,6 +1,6 @@
 import { Pressable,Text,View } from 'react-native';
 import styles from './CustomButtom.styles';
-const CustomButton=({title,onPress,mode,styless})=>{
+const CustomButton=({title,onPress,styless})=>{
  return(
     <View style={styless}>
         <Pressable onPress={onPress}>

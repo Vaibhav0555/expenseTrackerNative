@@ -13,14 +13,6 @@ const styles=StyleSheet.create({
         borderTopColor:colors.primary200,
         alignItems:"center"
     },
-    buttonContainer:{
-        flexDirection:"row",
-        justifyContent:"center",
-        marginHorizontal:4
-    },
-    buttonExtra:{
-        flex:1,
-        marginHorizontal:4
-    }
+   
 })
 export default styles;
