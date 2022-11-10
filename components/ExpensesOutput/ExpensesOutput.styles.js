@@ -5,6 +5,12 @@ const styles=StyleSheet.create({
         flex:1,
         padding:24,
         backgroundColor:colors.primary700
+    },
+    fallback:{
+        color:"white",
+        textFont:16,
+        marginTop:32,
+        textAlign:"center"
     }
 })
 

@@ -83,7 +83,7 @@ export default function App() {
           name='Manage expense'
           component={ManageExpense}
           options={{
-            presentation:"modal"
+            presentation:"modal"    //Navigation Styles
           }}
          />
         </stack.Navigator>

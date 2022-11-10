@@ -5,7 +5,7 @@ import style from "./ExpensesOutput.styles";
 
 const ExpensesOutput=({expensesList,periodName,fallback})=>{
   
-  let Context = <Text>{fallback}</Text>
+  let Context = <Text style={style.fallback}>{fallback}</Text>
   if(expensesList.length > 0){
      Context =<ExpenseList expensesList={expensesList} />
   }
@@ -16,7 +16,6 @@ const ExpensesOutput=({expensesList,periodName,fallback})=>{
       period={periodName}/>
       {Context}
     </View>
-   
   )  
 }
 export default ExpensesOutput;
