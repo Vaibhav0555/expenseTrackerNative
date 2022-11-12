@@ -1,8 +1,6 @@
 import {View,Text} from 'react-native';
 import style from './ExpensesSummary.styles';
-import { useSelector } from 'react-redux';
-const ExpensesSummary=({period})=>{
-    const expensesList=useSelector((state)=>state.expense.ExpenseListCenter)
+const ExpensesSummary=({period,expensesList})=>{
     const expenseSum = expensesList.reduce((sum,expense)=>{
         return(sum+expense.amount)
     },0);

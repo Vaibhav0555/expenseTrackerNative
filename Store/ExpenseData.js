@@ -12,8 +12,8 @@ const ExpenseSlice= createSlice({
         const selectedIndex =state.ExpenseListCenter.findIndex((element)=>element.id === action.payload)
         state.ExpenseListCenter.splice(selectedIndex,1)
       },
-      add(state,action){
-        state.ExpenseListCenter.push(action.payload)
+      setExpense(state,action){    
+        state.ExpenseListCenter=action.payload
       },
       update(state,action){
         const {id,expense} = action.payload;

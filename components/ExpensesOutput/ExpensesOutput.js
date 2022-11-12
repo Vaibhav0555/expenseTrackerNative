@@ -13,7 +13,8 @@ const ExpensesOutput=({expensesList,periodName,fallback})=>{
   return(
     <View style={style.container}>
       <ExpensesSummary 
-      period={periodName}/>
+      period={periodName}
+      expensesList={expensesList}/>
       {Context}
     </View>
   )  

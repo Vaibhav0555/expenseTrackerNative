@@ -28,7 +28,6 @@ const ExpenseForm=(props)=>{
     const Submit=()=>{
         if(!props.checkpoint){
             const expense={
-                id:Math.random().toString(),
                 amount:+amountstate,
                 date: new Date(dateState),
                 description:descritionState
