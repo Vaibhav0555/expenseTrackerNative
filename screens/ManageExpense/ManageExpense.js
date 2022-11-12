@@ -6,6 +6,7 @@ import styles from './ManageExpense.styles';
 import {CustomButton,ExpenseForm} from '../../components'
 import { useDispatch,useSelector } from 'react-redux';
 import {ExpenseAction} from '../../Store';
+import {storeExpense} from '../../utils/http';
 
 
 const ManageExpense=({route,navigation})=>{
@@ -21,7 +22,7 @@ const ManageExpense=({route,navigation})=>{
     },[navigation,editedexpenseId])
 
     const addExpenseHandler=(expense)=>{
-        dispatch(ExpenseAction.add(expense))
+        storeExpense(expense);
         navigation.goBack();
     }
 
